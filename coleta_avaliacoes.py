@@ -1,4 +1,55 @@
 # -*- coding: utf-8 -*-
+"""
+===============================================================================
+UNIVERSIDADE PRESBITERIANA MACKENZIE
+Faculdade de Computação e Informática
+Disciplina: Inteligência Artificial - 7ºJ SI - Noite
+Professor: Prof. Dr. Leandro Zerbinatti
+
+PROJETO: Classificação automática de reclamações de usuários de aplicativos
+         de pagamento digital (PIX / carteiras digitais)
+
+INTEGRANTES:
+    Bruno Cruz Bregion Novo - RA 10409538 - 10409538@mackenzista.com.br
+    Vinicius Silva Almeida  - RA 10409019 - 10409019@mackenzista.com.br
+    Gabriel Bello           - RA 10416808 - 10416808@mackenzista.com.br
+
+SÍNTESE DO CONTEÚDO DO ARQUIVO:
+    Script responsável pela COLETA (captura própria) do dataset do projeto.
+    Utiliza a biblioteca google-play-scraper para extrair as avaliações
+    públicas de seis aplicativos brasileiros de pagamento digital na Google
+    Play Store. Para cada avaliação são capturados: aplicativo de origem, nota
+    atribuída (1 a 5), texto livre da avaliação, data de publicação, número de
+    curtidas, versão do aplicativo e indicação de resposta da empresa.
+
+    O nome do usuário é descartado e substituído por identificador
+    pseudonimizado (hash SHA-256 truncado), de modo que o dataset publicado não
+    contenha dados pessoais diretamente identificáveis, em atenção à Lei nº
+    13.709/2018 (LGPD).
+
+    A execução é incremental: caso já exista arquivo de coleta anterior, os
+    novos registros são consolidados aos existentes, com remoção de duplicatas
+    por identificador de avaliação. Isso permite reexecutar o script para
+    ampliar o conjunto ou para capturar um aplicativo que tenha falhado, sem
+    perder a coleta já realizada.
+
+HISTÓRICO DE ALTERAÇÕES:
+    2026-09-08 | Bruno Cruz Bregion Novo | Criação do script de coleta.
+    2026-09-08 | Bruno Cruz Bregion Novo | Correção do identificador de pacote
+                                           do aplicativo Nubank, que estava
+                                           incorreto e resultou em zero
+                                           registros na primeira execução. O
+                                           valor correto é com.nu.production.
+    2026-09-10 | Bruno Cruz Bregion Novo | Unificação do script de coleta
+                                           complementar neste arquivo, com
+                                           adição do modo incremental e do
+                                           parâmetro de coleta seletiva.
+    2026-09-14 | Bruno Cruz Bregion Novo | Tratamento de argumentos desconhecidos,
+                                           permitindo a execução do script
+                                           também de dentro de uma célula de
+                                           notebook (Jupyter/Colab).
+===============================================================================
+"""
 
 import argparse
 import csv
