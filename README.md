@@ -10,7 +10,6 @@ Prof. Dr. Leandro Zerbinatti — 2026
 |---|---|---|
 | Bruno Cruz Bregion Novo | 10409538 | 10409538@mackenzista.com.br |
 | Vinicius Silva Almeida | 10409019 | 10409019@mackenzista.com.br |
-| Gabriel Bello | 10416808 | 10416808@mackenzista.com.br |
 
 ## Sobre o projeto
 
