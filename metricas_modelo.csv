@@ -1,0 +1,6 @@
+﻿Métrica,Valor
+"F1 macro (teste, texto completo)",0.7828
+"F1 macro (teste, sem gatilhos)",0.4691
+F1 macro (classificador trivial),0.0787
+Retenção após ablação,0.5544
+F1 macro (validação cruzada),0.775
