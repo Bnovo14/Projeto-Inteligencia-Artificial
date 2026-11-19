@@ -11,6 +11,10 @@ Prof. Dr. Leandro Zerbinatti — 2026
 | Bruno Cruz Bregion Novo | 10409538 | 10409538@mackenzista.com.br |
 | Vinicius Silva Almeida | 10409019 | 10409019@mackenzista.com.br |
  
+## Apresentação em vídeo
+ 
+**https://youtu.be/8KxDhn7Avmk** — 4min31s, narrado pelos dois integrantes.
+ 
 ## Sobre o projeto
  
 **Opção escolhida:** Framework (scikit-learn) — classificação supervisionada de texto.
@@ -113,6 +117,7 @@ calculadas pelas regras.
 | `amostra_rotulagem.csv` | Amostra preparada na N1 para rotulagem manual |
 | `corpus_classificado.csv` | Corpus com a categoria final de cada avaliação |
 | `metricas_modelo.csv` | Métricas consolidadas da avaliação |
+| `Apresentacao_N2.pptx` | Apresentação com narração embutida e avanço automático |
  
 ## Como reproduzir
  
